@@ -87,10 +87,18 @@ def install_agent():
         coordinate = app.dlg['Manually'].rectangle()
         click_coordinate (coordinate)
 
-        shell.SendKeys("name_agent")
+        shell.SendKeys("name_agent22")
         shell.SendKeys('^{ENTER}')
         shell.SendKeys('{ENTER}')
-        #Важно! Тут не нажимается кнопка Применить. Необходимо иметь это ввиду.
+                
+        coordinate = app.dlg['Install agents on specified computers only'].rectangle()
+        click_coordinate (coordinate)
+        shell.SendKeys('+{TAB}')
+        shell.SendKeys('+{TAB}')
+        shell.SendKeys('{ENTER}')
+
+        print ("Тест завершен. Агент поставлен на установку!")
+
 start_AC()
 time.sleep(1)
 install_agent()
