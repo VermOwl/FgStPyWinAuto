@@ -102,6 +102,7 @@ def install_agent():
 start_AC()
 time.sleep(1)
 <<<<<<< HEAD
+install_agent()
 =======
 install_agent()
 
