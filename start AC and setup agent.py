@@ -90,7 +90,7 @@ def install_agent():
         shell.SendKeys("name_agent")
         shell.SendKeys('^{ENTER}')
         shell.SendKeys('{ENTER}')
-
+        #Важно! Тут не нажимается кнопка Применить. Необходимо иметь это ввиду.
 start_AC()
 time.sleep(1)
 install_agent()
