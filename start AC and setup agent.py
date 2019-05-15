@@ -101,11 +101,5 @@ def install_agent():
 
 start_AC()
 time.sleep(1)
-<<<<<<< HEAD
-install_agent()
-=======
 install_agent()
 
-#It's my first change on the desktop
-#This is my second change on the desktop
->>>>>>> test
