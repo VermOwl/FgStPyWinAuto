@@ -1,0 +1,1 @@
+xcopy \\192.168.3.81\Share_mytest\FgStPyWinAuto C:\autotestfiles /f /i /y /s
