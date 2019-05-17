@@ -68,6 +68,7 @@ def install_agent():
         except:
                 print ("Не смог найти элемент Endpoint agents options. Перезапускаю АС")
                 os.system("taskkill /im FalconGaze.SecureTower.AdminConsole.exe")
+                time.sleep(3)
                 start_AC()
                 install_agent()
         else:
