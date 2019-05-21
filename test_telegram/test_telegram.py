@@ -15,6 +15,7 @@ import string
 import win32api
 import win32com.client
 import os
+import getpass
 
 def click_coordinate (coordinate):
     m = re.search(r'L(\d+), T(\d+), R(\d+), B(\d+)', str(coordinate))
@@ -25,8 +26,12 @@ def click_coordinate (coordinate):
 
 def telegram_test ():
     shell = win32com.client.Dispatch("WScript.Shell") #нажатие клавиш с клавиатуры
-    
-    start = Application(backend="uia").start(r"C:\Users\vm01\AppData\Roaming\Telegram Desktop\Telegram.exe") #надо поменять плоьзователя
+
+    username = getpass.getuser()
+    print(username)
+    path_telegram = (r"C:\\Users\\" + username + r"\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe")
+    print (path_telegram)
+    start = Application(backend="uia").start(path_telegram) #надо получать пользователя и подменять его
     
     PROCNAME = "Telegram.exe"
     for proc in psutil.process_iter():
